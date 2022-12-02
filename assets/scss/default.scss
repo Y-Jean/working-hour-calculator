@@ -1,0 +1,152 @@
+/* Scss Document */
+@import "scss_color_mixin.scss";
+
+.w-20px {
+  width: 20px !important;
+}
+.w-30px {
+  width: 30px !important;
+}
+.w-40px {
+  width: 40px !important;
+}
+.w-60px {
+  width: 60px !important;
+}
+.w-80px {
+  width: 80px !important;
+}
+.w-90px {
+  width: 90px !important;
+}
+.w-100px {
+  width: 100px !important;
+}
+.w-120px {
+  width: 120px !important;
+}
+.w-140px {
+  width: 140px !important;
+}
+.w-150px {
+  width: 150px !important;
+}
+.w-160px {
+  width: 160px !important;
+}
+.w-180px {
+  width: 180px !important;
+}
+.w-200px {
+  width: 200px !important;
+}
+.w-mx200px {
+  max-width: 200px !important;
+}
+.w-210px {
+  width: 210px !important;
+}
+.w-270px {
+  width: 270px !important;
+}
+.w-mx270px {
+  max-width: 270px !important;
+}
+.w-300px {
+  width: 300px !important;
+}
+.w-310px {
+  width: 310px !important;
+}
+.w-320px {
+  width: 320px !important;
+}
+.w-tree {
+  width: 345px !important;
+}
+.w-360px {
+  width: 360px !important;
+}
+.w-mx400px {
+  max-width: 400px !important;
+}
+.w-400px {
+  width: 400px !important;
+}
+.w-800px {
+  width: 800px;
+}
+
+
+.title {
+  font-weight: 400 !important;
+  text-align: center;
+}
+
+/*근무제 선택 UI*/
+.wrap-timepicker {
+  display: inline-flex;
+  .date-time-picker {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1405px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.btn-group {
+  .btn-toggle-day {
+    &.btn {
+      background-color: $color-White;
+      border: 1px solid $color-Secondary;
+      color: $color-Secondary;
+      padding: .25rem .5rem;
+      font-size: .875rem;
+      border-radius: 0;
+      &:first-of-type {
+        border-radius: .3rem 0 0 .3rem !important;
+      }
+      &:last-of-type {
+        border-radius: 0 .3rem .3rem 0 !important;
+      }
+      &:hover {
+        color: $color-Secondary;
+      }
+      &.active {
+        background-color: $color-Green1;
+        border: 1px solid rgba($color-Primary,1);
+        color: $color-Primary;
+        &:hover {
+          color: $color-Primary;
+        }
+      }
+      &.focus,&:focus {
+        box-shadow: none !important;
+      }
+      &.disabled,&:disabled {
+        background: $color-Grey4;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+/*결재-미리보기*/
+.schedule-set-area {
+  select {
+    cursor: default !important;
+  }
+  .btn-group label {
+    cursor: default !important;
+  }
+  button {
+    cursor: default !important;
+  }
+}
+
+
+.only-time {
+  width: 160px !important;
+}

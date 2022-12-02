@@ -1,0 +1,53 @@
+// 컬러
+$color-White: #fff;
+$color-Primary: #00a551;
+$color-Secondary: #8199aa;
+$color-Info: #aac5c5;
+$color-Info-Dark: #8aadac;
+$color-Danger: #ff3154;
+$color-Danger-Dark: darken($color-Danger, 20%);
+$color-Danger-light: lighten($color-Danger, 15%);
+$color-OfficeBlue: #0059a6;
+$color-Blue: #15aaff;
+$font-Primary: #333;
+$font-Secondary: #666;
+$font-Secondary2: #999;
+$color-Grey1: #bababa;
+$color-Grey2: #e2e2e2;
+$color-Grey3: #f2f4f4;
+$color-Grey4: #f7f9f9;
+$color-border_table: #dee2e6;
+$color-Green1: #e7fff3;
+
+/*mix in*/
+// transition
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+// background icon 
+@mixin BgSizePadding($background, $background-size, $padding) {
+  background: $background;
+  background-size: $background-size;
+  padding: $padding;
+}
+//text ...
+@mixin TextEllipsis($white-space, $overflow, $text-overflow) {
+  white-space: $white-space; 
+  overflow: $overflow;
+  text-overflow: $text-overflow;
+}
+//color
+@mixin Color-Bg-BorderColor( $color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+}
+//버튼 hover, active, focus
+@mixin ButtonEffect( $color, $background-color, $border-color, $box-shadow) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  box-shadow: $box-shadow;
+}

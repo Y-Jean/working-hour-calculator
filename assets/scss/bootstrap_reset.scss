@@ -1,0 +1,745 @@
+@import "scss_color_mixin.scss";
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+  margin-bottom: 0 !important;
+}
+h1 {
+  font-size: 2rem !important; //36px
+}
+h2 {
+  font-size: 1.77rem !important; //32px
+}
+h3 {
+  font-size: 1.55 !important;//28px
+}
+h4 {
+  font-size: 1.22 !important;//22px
+}
+h5 {
+  font-size: 1.11rem !important; //20px
+}
+h6 {
+  font-size: 1rem !important; //18px
+}
+a {
+  color: inherit !important;
+}
+.small, small {
+  font-size: 80% !important;
+}
+p {
+  margin-bottom: .25rem !important;
+}
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+span.text-danger {
+  color: $color-Danger !important;
+}
+.bg-primary2 {
+  background-color: $color-Primary !important;
+}
+.bg-secondary2 {
+  background-color: $color-Secondary !important;
+}
+.bg-info {
+  background-color: $color-Info !important;
+}
+.bg-danger {
+  background-color: $color-Danger !important;
+}
+.bg-grey4 {
+  background-color: $color-Grey4 !important;
+}
+.bg-grey3 {
+  background-color: $color-Grey3 !important;
+}
+.bg-white {
+  background-color: $color-White !important;
+}
+.bg-primary-light {
+  background-color: lighten($color-Primary, 64%);
+}
+.dropdown:hover {
+  cursor: pointer;
+}
+button:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+.collapse-btn {
+  outline: 0 !important;
+}
+.breadcrumb {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  font-size: .77rem !important;
+  .breadcrumb-item {
+    color: $font-Secondary !important;
+  }
+  .breadcrumb-item.active {
+    color: $font-Secondary2 !important;
+  }
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  content: "\276D" !important;
+}
+.badge-primary {
+  background-color: lighten($color-Primary, 57%) !important;
+  color: darken($color-Primary, 15%) !important;
+}
+.badge-primary2 {
+  background-color: $color-Primary;
+  color: $color-White;
+}
+.badge-secondary {
+  background-color: lighten($color-Secondary, 35%) !important;
+  color: darken($color-Secondary, 20%) !important;
+}
+.badge-secondary2 {
+  background-color: $color-Secondary;
+  color: $color-White;
+}
+.badge-danger {
+  background-color: lighten($color-Danger, 35%) !important;
+  color: darken($color-Danger, 10%) !important;
+}
+.badge-danger2 {
+  background-color: $color-Danger;
+  color: $color-White;
+}
+.badge-done {
+  background-color: $color-Grey2 !important;
+  color: $font-Secondary !important;
+}
+.badge {
+  font-weight: 400 !important;
+  padding: .25em .5em .3em !important;
+  margin-bottom: 2px !important;
+  vertical-align: middle !important;
+  border-radius: 5px !important;
+}
+.badge-lg {
+  font-size: 100% !important;
+}
+//form
+label {
+  font-size: .77rem;
+  margin-bottom: 0px !important;
+  color: $font-Secondary;
+}
+textarea::placeholder,
+input::placeholder {
+  color: $color-Grey1 !important;
+}
+.form-control {
+  border-radius: 5px !important;
+  border: 1px solid $color-Grey1 !important;
+  color: $font-Primary !important;
+  padding: .36rem .75rem !important;
+}
+.form-control-sm {
+  padding: .25rem .5rem !important;
+}
+textarea:focus,
+input:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus.form-control,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+select.form-control:focus {   
+  border-color: $font-Secondary !important;
+  box-shadow: none !important;
+  outline: 0 none !important;
+}
+.form-control:disabled, .form-control[readonly] {
+  color: $font-Secondary2 !important;
+  background-color: $color-Grey4 !important;
+  border-color: $color-Grey2 !important;
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: $color-Danger !important;
+  // background-image: url(~assets/img/icon/ui_input_icon_x.svg) !important;
+}
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+  background-image: none !important;
+}
+.was-validated .form-control:valid {
+  border-color: $color-Primary !important;
+  // background-image: url(~assets/img/icon/ui_input_icon_check.svg) !important;
+}
+.invalid-feedback {
+  color: $color-Danger !important;
+  font-size: 70% !important;
+}
+.valid-feedback {
+  color: $color-Primary !important;
+  font-size: 70% !important;
+}
+
+
+//button
+.btn {
+  padding-right: 1rem;
+  padding-left: 1rem; 
+  border-radius: 5px;
+}
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn-primary:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    $color-Primary !important,
+    $color-Primary !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Primary, 5%) !important,
+      lighten($color-Primary, 5%) !important,
+      0px 3px 10px 0 rgba($color-Primary,0.35)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Primary, 3%) !important,
+      lighten($color-Primary, 3%) !important,
+      0px 2px 1px 0 rgba($color-Primary,0.35)!important);
+    }
+}
+.btn-outline-primary:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-Primary !important,
+    $color-White !important,
+    $color-Primary !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-Primary !important,
+      $color-White !important,
+      lighten($color-Primary, 5%) !important,
+      0px 3px 10px 0 rgba($color-Primary,0.2)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-Primary !important,
+      lighten($color-Primary, 55%) !important,
+      lighten($color-Primary, 3%) !important,
+      0px 2px 1px 0 rgba($color-Primary,0.2)!important);
+    }
+}
+.btn-secondary:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    $color-Secondary !important,
+    $color-Secondary !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Secondary, 10%) !important,
+      lighten($color-Secondary, 10%) !important,
+      0px 3px 10px 0 rgba($color-Secondary,0.35)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Secondary, 3%) !important,
+      lighten($color-Secondary, 3%) !important,
+      0px 2px 1px 0 rgba($color-Secondary,0.35)!important);
+    }
+}
+.btn-outline-secondary:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-Secondary !important,
+    $color-White !important,
+    $color-Secondary !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-Secondary !important,
+      $color-White !important,
+      lighten($color-Secondary, 5%) !important,
+      0px 3px 10px 0 rgba($color-Secondary,0.2)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-Secondary !important,
+      lighten($color-Secondary, 35%) !important,
+      lighten($color-Secondary, 3%) !important,
+      0px 2px 1px 0 rgba($color-Secondary,0.2)!important);
+    }
+}
+.btn-info:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    $color-Info !important,
+    $color-Info !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Info, 5%) !important,
+      lighten($color-Info, 5%) !important,
+      0px 3px 10px 0 rgba($color-Info,0.35)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Info, 3%) !important,
+      lighten($color-Info, 3%) !important,
+      0px 2px 1px 0 rgba($color-Info,0.35)!important);
+    }
+}
+.btn-outline-info:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-Info-Dark !important,
+    $color-White !important,
+    $color-Info !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-Info !important,
+      $color-White !important,
+      lighten($color-Info, 5%) !important,
+      0px 3px 10px 0 rgba($color-Info,0.35)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-Info-Dark !important,
+      lighten($color-Info, 25%) !important,
+      lighten($color-Info, 3%) !important,
+      0px 2px 1px 0 rgba($color-Info,0.35)!important);
+    }
+}
+.btn-danger:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    $color-Danger !important,
+    $color-Danger !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Danger, 7%) !important,
+      lighten($color-Danger, 7%) !important,
+      0px 3px 10px 0 rgba($color-Danger,0.35)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-White !important,
+      lighten($color-Danger, 3%) !important,
+      lighten($color-Danger, 3%) !important,
+      0px 2px 1px 0 rgba($color-Danger,0.35)!important);
+    }
+}
+.btn-outline-danger:not(:disabled) {
+  @include Color-Bg-BorderColor (
+    $color-Danger !important,
+    $color-White !important,
+    $color-Danger !important);
+    &:hover {
+      @include ButtonEffect (
+      $color-Danger !important,
+      $color-White !important,
+      lighten($color-Danger, 5%) !important,
+      0px 3px 10px 0 rgba($color-Danger,0.2)!important);
+    }
+    &:focus,
+    &:active {
+      @include ButtonEffect (
+      $color-Danger !important,
+      lighten($color-Danger, 36%) !important,
+      lighten($color-Danger, 3%) !important,
+      0px 2px 1px 0 rgba($color-Danger,0.2)!important);
+    }
+}
+.btn-link {
+  color: $color-Blue !important;
+  padding: 0 .25rem !important;
+  line-height: 1rem !important;
+}
+//비활성화 버튼 공통
+.btn-primary:disabled,
+.btn-secondary:disabled,
+.btn-info:disabled,
+.btn-danger:disabled {
+  @include Color-Bg-BorderColor (
+    $font-Secondary2 !important,
+    $color-Grey3 !important,
+    $color-Grey3 !important);
+}
+.btn-outline-primary:disabled,
+.btn-outline-secondary:disabled,
+.btn-outline-info:disabled,
+.btn-outline-danger:disabled {
+  @include Color-Bg-BorderColor (
+    $font-Secondary2 !important,
+    $color-Grey4 !important,
+    $color-Grey2 !important);
+}
+//체크박스
+.custom-control-label {
+  font-size: 1rem !important;
+  line-height: 1.7rem !important;
+  margin-bottom: 0 !important;
+  color: $font-Primary !important;
+  &::after {
+    width: 1.11rem !important;
+    height: 1.11rem !important;
+    
+  }
+  &::before {
+    border-radius: 3px !important;
+    width: 1.11rem !important;
+    height: 1.11rem !important;
+    border-color: $color-Grey1 !important;
+  }
+}
+.custom-control-input:checked~.custom-control-label::before {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    $color-Primary !important,
+    $color-Primary !important);
+}
+.custom-control-input:disabled:checked~.custom-control-label::before {
+  @include Color-Bg-BorderColor (
+    $color-White !important,
+    #b8d3c3 !important,
+    #b8d3c3 !important);
+}
+.custom-control-label.small {
+  font-size: .88rem !important;
+}
+.custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
+  background-color: $color-Secondary !important;
+}
+//라디오 버튼
+.custom-radio .custom-control-label::before {
+  border-radius: 50% !important;
+}
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: none !important;
+}
+//파일 등록 
+.custom-file-input:focus ~ .custom-file-label::before,
+.custom-file-input:hover ~ .custom-file-label::before,
+.custom-file-input:active ~ .custom-file-label {
+  box-shadow: none !important;
+}
+.custom-file-label {
+  font-size: 1rem !important;
+  border-radius: 5px !important;
+  border: 1px solid $color-Grey1 !important;
+  color: $font-Primary !important;
+}
+.custom-file-label::after {
+  content: "찾기" !important;
+  background-color: $color-Grey3 !important;
+}
+//토글 스위치 버튼
+.custom-switch {
+  padding-left: 3rem !important;
+}
+.custom-switch > .custom-control-label::before {
+  width: 2.5rem !important;
+  border-radius: 1rem !important;
+  height: 1.35rem !important;
+  left: -3.1rem !important;
+  margin-top: -.1rem !important;
+}
+.custom-switch > .custom-control-label::after {
+  border-radius: 1rem !important; 
+  left: -2.95rem !important;
+  top: calc(.156rem + 2px) !important;
+}
+.custom-switch > .custom-control-input:checked~.custom-control-label::after {
+  transform: translateX(1.2rem) !important;
+  left: calc(-3.1rem + 1px) !important;
+  top:  calc(.156rem + 2px) !important;
+}
+//체크, 라디오, 토글 disable 
+.custom-control-input:disabled~.custom-control-label {
+  color: $font-Secondary2 !important;
+}
+
+//table
+.table td, .table th {
+  vertical-align: middle !important;
+  padding: .5rem !important;
+}
+.table tr:last-child td {
+  border-bottom: solid 1px $color-border_table;
+}
+.table-bordered thead td, .table-bordered thead th {
+  border-bottom-width: 1px !important;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: $color-Grey4 !important;
+}
+// .table-striped tbody tr:last-child td {
+//   border-bottom: solid 1px #dee2e6;
+// }
+.table-hover tbody tr:hover,
+.table-striped.table-hover tbody tr:nth-of-type(odd):hover {
+  background-color: lighten($color-Primary, 65%) !important;
+}
+.table .thead-light th {
+  background-color: $color-Grey4 !important;
+}
+//pagenation
+.page-item {
+  &.active {
+    .page-link {
+      @include Color-Bg-BorderColor ($color-White !important, $color-Info !important, $color-Info !important);
+    }
+  }
+  &:last-child .page-link {
+    padding: .25rem .5rem !important;
+  }
+  &:first-child .page-link {
+    padding: .25rem .5rem !important;
+  }
+  .page-link {
+    font-size: .77rem;
+    padding: .25rem .75rem !important;
+    &:focus {
+      color: #fff !important;
+      box-shadow: none !important;
+      background-color: lighten($color-Secondary, 10%) !important;
+    }
+  }
+}
+/* dataTables 초기화 */
+.dataTables_processing {
+  &.card {
+    border: none;
+    background-color: transparent;
+  }
+}
+.dataTables_filter {
+  .form-control-sm {
+    height: calc(1.5em + .75rem + 2px);
+  }
+}
+
+//table info
+.table-paging {
+  .dataTables_info {
+    padding: .6rem !important;
+    font-size: .88rem !important;
+    color: $font-Secondary !important;
+  }
+}
+//툴팁
+// .tooltip {
+//   font-family: NotoSans-Regular, '본고딕', 'Malgun Gothic', '맑은 고딕', helvetica, sans-serif, Font Awesome\ 5 Free !important;
+//   z-index: 9999 !important;
+//   .tooltip-inner {
+//     width: 450px !important;
+//     max-width: 450px !important;
+//     background-color: lighten($color-Primary, 52%) !important;
+//     color: darken($color-Primary, 15%) !important;
+//   }
+// }
+// .bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+// .bs-tooltip-right .arrow::before {
+//   border-right-color: lighten($color-Primary, 52%) !important;
+// }
+//팝오버
+// .popover {
+//   font-family: NotoSans-Regular, '본고딕', 'Malgun Gothic', '맑은 고딕', helvetica, sans-serif, Font Awesome\ 5 Free !important;
+//   max-width: 500px !important;
+//   z-index: 9999 !important;
+//   font-size: .88rem !important;
+// }
+// .popover-body {
+//   padding: 1rem 1.5rem !important;
+// }
+//알럿
+.alert {
+  border-radius: 5px !important;
+  margin-bottom: .5rem !important;
+}
+.alert-primary {
+  color: $color-Primary !important;
+  background-color: lighten($color-Primary, 63%) !important;
+  border-color: lighten($color-Primary, 50%) !important;
+}
+.alert-secondary {
+  color: $color-Secondary !important;
+  background-color: lighten($color-Secondary, 58%) !important;
+  border-color: lighten($color-Secondary, 50%) !important;
+}
+.alert-danger {
+  color: $color-Danger !important;
+  background-color: lighten($color-Danger, 37%) !important;
+  border-color: lighten($color-Danger, 25%) !important;
+}
+//모달
+// @media only screen and (max-width: 768px) {
+//   .modal {
+//     padding-right: 0 !important;
+//     margin-top: 2.3rem !important;
+//     .modal-dialog {
+//       margin: 0px !important;
+//       .modal-content {
+//         min-width: 300px !important;
+//         border-radius: 0 !important;
+//         margin: 0 !important;
+//         border: none !important;
+//         height: calc(100vh - 3rem) !important;
+//         .modal-title {
+//           font-size: 1.33rem !important;
+//           margin-top: -2rem !important;
+//         }
+//         .modal-body {
+//           padding: 2rem 1rem 1rem !important;
+//         }
+//       }
+//     }
+//     .modal-dialog-scrollable {
+//       .modal-content {
+//         max-height: calc(100% - 2rem) !important;
+//       }
+//     }
+//   }
+//  }
+
+@media (min-width: 1405px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+.modal-full {
+  padding: 0 !important;
+  
+  .modal-dialog {
+    min-width: 100% !important;
+    margin: 0 !important;
+    .modal-content {
+      min-height: 100vh;
+      border-radius: 0 !important;
+      .close {
+        z-index: 1000 !important;
+        color: $color-White !important;
+        text-shadow: none !important;
+        padding: 1rem !important;
+        right: 0;
+      }
+      .modal-body {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+/*이중모달 효과*/
+.modal-content .modal-content {
+  -webkit-box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    -o-box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+
+.modal {
+  overflow: auto !important;
+}
+.modal-dialog-scrollable {
+  .modal-content.no-scrollable {
+    overflow: visible !important;
+    .modal-body {
+      overflow-y: visible;
+    }
+  }
+}
+.modal-content {
+  &.approval-view {
+    .table {
+      font-size: 88% !important;
+      th {
+        font-size: .95em;
+      }
+      label {
+        font-size: 90%;
+        &.custom-control-label {
+          font-size: 90% !important;
+        }
+      }
+      &.table-sm {
+        font-size: 70% !important;
+      }
+    }
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .close {
+    font-size: 2.5rem !important;
+    font-weight: 400 !important;
+    color: $font-Secondary2 !important;
+    padding: .5rem .5rem 0;
+    width: 4.5rem;
+    // height: 4rem;
+    margin-left: auto;
+  }
+  .modal-title {
+    font-weight: 400 !important;
+    margin-top: -1.5rem !important;
+    text-align: center;
+  }
+  .modal-body {
+    padding: 2rem 2rem 1rem;
+  }
+  .modal-footer {
+    border-top: none !important;
+  }
+}
+.modal-backdrop.in {
+	opacity: 0.9 !important;
+}
+//tabs-
+.nav-pills .nav-link {
+  border: solid 1px $color-Grey2;
+  background-color: $color-Grey4;
+  margin-left: -1px;
+  border-radius: 0 !important;
+  color: $font-Secondary2 !important;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: $color-White !important;
+  color: $font-Primary !important;
+  border-bottom: solid 1px $color-Primary !important;
+}
+
+.dropdown .btn-secondary {
+  @include Color-Bg-BorderColor ($font-Secondary !important, $color-White !important, $color-White !important);
+}
+.dropdown .btn.focus,
+.dropdown .btn:focus {
+  box-shadow: none !important;
+}
+a.dropdown-item:active {
+  background-color: $color-White !important;
+}
+
+/* Scss Document */

@@ -1,0 +1,40 @@
+@import "scss_color_mixin.scss";
+
+
+/*먼슬리피커*/
+.vue-monthly-picker {
+  .month-year-display {
+    height: 42.5px !important;
+  }
+  .display-text {
+    text-align: center !important;
+  }
+  .date-popover {
+    top: 42px;
+    padding: .5rem;
+    border-radius: 5px !important;
+    border-color: transparent !important;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1) !important;
+  }
+  .flexbox {
+    .item {
+      font-size: .8rem !important;
+      &.selected {
+        background-color: $color-Primary !important;
+        text-shadow: none !important;
+        &:hover {
+          background-color: rgba($color-Primary,1) !important;
+        }
+      }
+      &:hover {
+        background-color: rgba($color-Primary,0.1) !important;
+      }
+    }
+    .next:after {
+      border-left: 10px solid $font-Secondary2 !important;
+    }
+    .prev:after {
+      border-right: 10px solid $font-Secondary2 !important;
+    }
+  }
+}
